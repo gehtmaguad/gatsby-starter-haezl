@@ -13,9 +13,7 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "dependencies": {
-    "@emotion/core": "^10.0.7",
     "gatsby": "^2.1.17",
-    "gatsby-plugin-emotion": "^4.0.4",
     "gatsby-plugin-typescript": "^2.0.9",
     "gatsby-plugin-typography": "^2.2.7",
     "gatsby-source-filesystem": "^2.0.22",

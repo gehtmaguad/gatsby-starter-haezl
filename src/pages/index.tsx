@@ -1,5 +1,4 @@
 import * as React from "react"
-import { css } from "@emotion/core"
 import { Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 import Layout from "../components/layout"
@@ -10,10 +9,10 @@ export default ({ data }) => {
     <Layout>
       <div>
         <h1
-          css={css`
-            display: inline-block;
-            border-bottom: 1px solid;
-          `}
+          style={{
+            display: "inline-block",
+            borderBottom: "1px solid",
+          }}
         >
           Amazing Pandas Eating Things
         </h1>
@@ -22,21 +21,21 @@ export default ({ data }) => {
           <div key={node.id}>
             <Link
               to={node.fields.slug}
-              css={css`
-                text-decoration: none;
-                color: inherit;
-              `}
+              style={{
+                textDecoration: "none",
+                color: "inherit",
+              }}
             >
               <h3
-                css={css`
-                  margin-bottom: ${rhythm(1 / 4)};
-                `}
+                style={{
+                  marginBottom: rhythm(1 / 4),
+                }}
               >
                 {node.frontmatter.title}{" "}
                 <span
-                  css={css`
-                    color: #bbb;
-                  `}
+                  style={{
+                    color: "#bbb",
+                  }}
                 >
                   — {node.frontmatter.date}
                 </span>
