@@ -1,10 +1,9 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
-import Layout from "../templates/layout"
+import Layout from "../templates/index-layout"
 
 export default ({ data }) => {
-  console.log(data)
   return (
     <Layout>
       <div style={{ minHeight: "50vh" }}>

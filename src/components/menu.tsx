@@ -1,36 +1,40 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-export default props => (
-  <div style={{ textAlign: "center" }}>
+export default ({ verticallyAligned = false, minimized = false }) => (
+  <div
+    style={{
+      textAlign: "center",
+      display: minimized ? "inline-block" : "block",
+    }}
+  >
     <div
       style={{
-        textAlign: "center",
-        display: props.verticallyAligned ? "block" : "inline-block",
+        display: verticallyAligned ? "block" : "inline-block",
       }}
     >
-      <a
-        href={`#children`}
+      <Link
+        to={`/#children`}
         style={{
           display: "inline-block",
           borderRadius: 3,
           textAlign: "center",
           backgroundColor: "white",
-          width: 150,
-          height: 50,
-          padding: 10,
-          margin: 10,
+          width: minimized ? 100 : 150,
+          height: minimized ? 35 : 50,
+          padding: minimized ? 3 : 10,
+          margin: minimized ? 3 : 10,
           color: "#00bcd4",
           textDecoration: "none",
         }}
       >
         Posts
-      </a>
+      </Link>
     </div>
     <div
       style={{
         textAlign: "center",
-        display: props.verticallyAligned ? "block" : "inline-block",
+        display: verticallyAligned ? "block" : "inline-block",
       }}
     >
       <Link
@@ -40,10 +44,10 @@ export default props => (
           borderRadius: 3,
           textAlign: "center",
           backgroundColor: "white",
-          width: 150,
-          height: 50,
-          padding: 10,
-          margin: 10,
+          width: minimized ? 100 : 150,
+          height: minimized ? 35 : 50,
+          padding: minimized ? 3 : 10,
+          margin: minimized ? 5 : 10,
           color: "#00bcd4",
           textDecoration: "none",
         }}
