@@ -17,21 +17,22 @@ export default ({ data }) => {
                 color: "inherit",
               }}
             >
-              <h3
+              <p style={{ color: "#777", margin: 0, fontSize: 18 }}>
+                {node.frontmatter.date}
+              </p>
+              <h3 style={{ marginBottom: 5, marginTop: 2 }}>
+                {node.frontmatter.title}
+              </h3>
+              <p
                 style={{
-                  marginBottom: rhythm(1 / 4),
+                  color: "#777",
+                  marginTop: 6,
+                  textDecoration: "none",
+                  fontSize: 18,
                 }}
               >
-                {node.frontmatter.title}{" "}
-                <span
-                  style={{
-                    color: "#bbb",
-                  }}
-                >
-                  — {node.frontmatter.date}
-                </span>
-              </h3>
-              <p>{node.frontmatter.description}</p>
+                {node.frontmatter.description}
+              </p>
             </Link>
           </div>
         ))}

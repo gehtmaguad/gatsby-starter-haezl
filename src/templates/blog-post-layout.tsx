@@ -3,7 +3,6 @@ import { graphql, Link } from "gatsby"
 import Responsive from "react-responsive"
 
 import Author from "../components/author"
-import SocialNetworks from "../components/social-networks"
 import Menu from "../components/menu"
 
 const Mobile = props => <Responsive {...props} maxWidth={767} />
@@ -31,10 +30,6 @@ export default ({ data }) => {
             }}
           >
             <Author author={data.site.siteMetadata.author} minimized={true} />
-            {/* <SocialNetworks
-              networks={data.site.siteMetadata.networks}
-              minimized={true}
-            /> */}
           </div>
           <div style={{ marginLeft: "auto", paddingRight: 10 }}>
             <Menu minimized={true} />
@@ -42,7 +37,7 @@ export default ({ data }) => {
         </div>
       </Default>
       <Mobile>
-        <div style={{ textAlign: "center", margin: 10 }}>
+        <div style={{ textAlign: "center", marginTop: 10 }}>
           <Link
             to={`/#children`}
             style={{
@@ -56,7 +51,7 @@ export default ({ data }) => {
               width: 150,
               height: 35,
               padding: 5,
-              margin: 10,
+              marginTop: 10,
               color: "#555",
               textDecoration: "none",
               fontSize: 18,
@@ -66,8 +61,18 @@ export default ({ data }) => {
           </Link>
         </div>
       </Mobile>
-      <h1>{post.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <div
+        style={{
+          maxWidth: 650,
+          margin: "0 auto",
+          paddingTop: 40,
+          paddingLeft: 20,
+          paddingRight: 20,
+        }}
+      >
+        <h1>{post.frontmatter.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      </div>
     </>
   )
 }

@@ -1,5 +1,5 @@
 ---
-title: "Random blog article with html"
+title: "another random blog article"
 date: "2019-03-01"
 description: "This is yet another blog article with some random generated html"
 ---
