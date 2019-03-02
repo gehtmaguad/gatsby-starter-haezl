@@ -7,15 +7,7 @@ export default ({ data }) => {
   console.log(data)
   return (
     <Layout>
-      <div>
-        <h1
-          style={{
-            display: "inline-block",
-            borderBottom: "1px solid",
-          }}
-        >
-          Amazing Pandas Eating Things
-        </h1>
+      <div style={{ minHeight: "50vh" }}>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
@@ -40,7 +32,7 @@ export default ({ data }) => {
                   — {node.frontmatter.date}
                 </span>
               </h3>
-              <p>{node.excerpt}</p>
+              <p>{node.frontmatter.description}</p>
             </Link>
           </div>
         ))}
@@ -59,6 +51,7 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+            description
           }
           fields {
             slug

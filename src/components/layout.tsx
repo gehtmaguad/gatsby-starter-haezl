@@ -32,65 +32,51 @@ export default ({ children }) => (
         <Default>
           <div
             style={{
-              display: "flex",
-              alignItems: "flex-start",
+              paddingTop: 75,
+              backgroundImage: "linear-gradient(20deg, #039be5, #26a69a)",
+              paddingBottom: 75,
             }}
           >
-            <div
-              style={{
-                padding: rhythm(1.5),
-                paddingTop: rhythm(1),
-                width: 350,
-              }}
-            >
-              <Author author={data.site.siteMetadata.author} />
-              <Menu />
-              <SocialNetworks networks={data.site.siteMetadata.networks} />
-            </div>
-            <div
-              style={{
-                flexGrow: 1,
-                margin: "0 auto",
-                maxWidth: 700,
-                padding: rhythm(2),
-                paddingTop: rhythm(1.5),
-              }}
-            >
-              {children}
-            </div>
+            <Author author={data.site.siteMetadata.author} />
+            <SocialNetworks networks={data.site.siteMetadata.networks} />
+            <Menu />
+          </div>
+          <div
+            id={"children"}
+            style={{
+              flexGrow: 1,
+              margin: "0 auto",
+              maxWidth: 700,
+              padding: rhythm(2),
+              paddingTop: rhythm(1.5),
+            }}
+          >
+            {children}
           </div>
         </Default>
         <Mobile>
-          <div>
-            <div
-              style={{
-                padding: rhythm(1.5),
-                paddingTop: rhythm(1),
-              }}
-            >
-              <Author author={data.site.siteMetadata.author} />
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "flex-start",
-                  justifyContent: "space-around",
-                }}
-              >
-                <Menu />
-                <SocialNetworks networks={data.site.siteMetadata.networks} />
-              </div>
-            </div>
-            <div
-              style={{
-                flexGrow: 1,
-                margin: "0 auto",
-                maxWidth: 700,
-                padding: rhythm(2),
-                paddingTop: rhythm(1.5),
-              }}
-            >
-              {children}
-            </div>
+          <div
+            style={{
+              paddingTop: 50,
+              backgroundImage: "linear-gradient(20deg, #039be5, #26a69a)",
+              paddingBottom: 50,
+            }}
+          >
+            <Author author={data.site.siteMetadata.author} />
+            <SocialNetworks networks={data.site.siteMetadata.networks} />
+            <Menu verticallyAligned="true" />
+          </div>
+          <div
+            id={"children"}
+            style={{
+              flexGrow: 1,
+              margin: "0 auto",
+              maxWidth: 700,
+              padding: rhythm(2),
+              paddingTop: rhythm(1.5),
+            }}
+          >
+            {children}
           </div>
         </Mobile>
       </>

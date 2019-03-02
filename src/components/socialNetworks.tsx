@@ -2,7 +2,13 @@ import * as React from "react"
 import { SocialIcon } from "react-social-icons"
 
 export default ({ networks }) => (
-  <ul style={{ textAlign: "center", listStyleType: "none" }}>
+  <ul
+    style={{
+      textAlign: "center",
+      listStyleType: "none",
+      margin: "40px 0 35px 0",
+    }}
+  >
     {networks.map(networkUrl => (
       <li
         key={networkUrl}
@@ -15,9 +21,11 @@ export default ({ networks }) => (
       >
         <SocialIcon
           style={{
-            width: 35,
-            height: 35,
+            width: 45,
+            height: 45,
           }}
+          bgColor="#333"
+          fgColor="white"
           target="_blank"
           url={networkUrl}
         />

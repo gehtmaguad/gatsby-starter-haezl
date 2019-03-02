@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 a:hover {
-    color: tomato !important;
+    color: #00bcd4 !important;
 }
