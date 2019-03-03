@@ -2,10 +2,10 @@ import * as React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Responsive from "react-responsive"
 
-import { rhythm } from "../utils/typography"
-import Author from "../components/author"
-import Menu from "../components/menu"
-import SocialNetworks from "../components/social-networks"
+import { rhythm } from "../../utils/typography"
+import Author from "../author"
+import Menu from "../menu"
+import SocialNetworks from "../social-networks"
 
 const Mobile = props => <Responsive {...props} maxWidth={767} />
 const Default = props => <Responsive {...props} minWidth={768} />

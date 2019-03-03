@@ -1,7 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-import { rhythm } from "../utils/typography"
-import Layout from "../templates/index-layout"
+import Layout from "../components/layouts/index-layout"
 
 export default ({ data }) => {
   return (
