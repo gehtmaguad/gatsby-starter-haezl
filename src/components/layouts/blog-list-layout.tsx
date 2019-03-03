@@ -4,6 +4,7 @@ import Responsive from "react-responsive"
 
 import Author from "../me/author"
 import Menu from "../me/menu"
+import { rhythm } from "../../utils/typography"
 
 const Mobile = props => <Responsive {...props} maxWidth={767} />
 const Default = props => <Responsive {...props} minWidth={768} />
@@ -47,7 +48,7 @@ export default ({ children }) => (
               <Author author={data.site.siteMetadata.author} minimized={true} />
             </div>
             <div style={{ marginLeft: "auto", paddingRight: 10 }}>
-              <Menu minimized={true} />
+              <Menu minimized={true} hideAllPostsButton={true} />
             </div>
           </div>
         </Default>
@@ -76,7 +77,18 @@ export default ({ children }) => (
             </Link>
           </div>
         </Mobile>
-        {children}
+        <div
+          id={"children"}
+          style={{
+            flexGrow: 1,
+            margin: "0 auto",
+            maxWidth: 700,
+            padding: rhythm(2),
+            paddingTop: rhythm(1.5),
+          }}
+        >
+          {children}
+        </div>
       </>
     )}
   />

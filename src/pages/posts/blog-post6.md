@@ -1,6 +1,6 @@
 ---
 title: "blog bost 6"
-date: "2019-03-01"
+date: "2019-03-06"
 description: "This is the 6th blog poost"
 ---
 

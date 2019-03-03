@@ -1,6 +1,7 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layouts/index-layout"
+import BlogListElement from "../components/blog-list-element"
 
 export default ({ data }) => {
   return (
@@ -9,30 +10,14 @@ export default ({ data }) => {
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
-            <Link
-              to={node.fields.slug}
-              style={{
-                textDecoration: "none",
-                color: "inherit",
+            <BlogListElement
+              data={{
+                slug: node.fields.slug,
+                date: node.frontmatter.date,
+                title: node.frontmatter.title,
+                description: node.frontmatter.description,
               }}
-            >
-              <p style={{ color: "#777", margin: 0, fontSize: 18 }}>
-                {node.frontmatter.date}
-              </p>
-              <h3 style={{ marginBottom: 5, marginTop: 2 }}>
-                {node.frontmatter.title}
-              </h3>
-              <p
-                style={{
-                  color: "#777",
-                  marginTop: 6,
-                  textDecoration: "none",
-                  fontSize: 18,
-                }}
-              >
-                {node.frontmatter.description}
-              </p>
-            </Link>
+            />
           </div>
         ))}
       </div>
