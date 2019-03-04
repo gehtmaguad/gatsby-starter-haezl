@@ -6,6 +6,7 @@ import { rhythm } from "../../utils/typography"
 import Author from "../me/author"
 import Menu from "../me/menu"
 import SocialNetworks from "../me/social-networks"
+import CtaButton from "../me/cta-button"
 
 const Mobile = props => <Responsive {...props} maxWidth={767} />
 const Default = props => <Responsive {...props} minWidth={768} />
@@ -40,6 +41,7 @@ export default ({ children }) => (
             <Author author={data.site.siteMetadata.author} />
             <SocialNetworks networks={data.site.siteMetadata.networks} />
             <Menu />
+            <CtaButton />
           </div>
           <div
             id={"children"}
@@ -65,6 +67,7 @@ export default ({ children }) => (
             <Author author={data.site.siteMetadata.author} />
             <SocialNetworks networks={data.site.siteMetadata.networks} />
             <Menu verticallyAligned={true} />
+            <CtaButton />
           </div>
           <div
             id={"children"}

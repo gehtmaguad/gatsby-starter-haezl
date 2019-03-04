@@ -7,7 +7,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <div style={{ minHeight: "50vh" }}>
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+        <h4>Newest Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <BlogListElement
@@ -27,7 +27,10 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 5
+    ) {
       totalCount
       edges {
         node {

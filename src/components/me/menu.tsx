@@ -19,7 +19,7 @@ export default ({
         }}
       >
         <Link
-          to={`/#children`}
+          to={`/blog/1`}
           style={{
             display: "inline-block",
             borderRadius: 3,
@@ -33,7 +33,7 @@ export default ({
             textDecoration: "none",
           }}
         >
-          Posts
+          All Posts
         </Link>
       </div>
     )}
