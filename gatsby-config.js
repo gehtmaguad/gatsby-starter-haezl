@@ -42,6 +42,8 @@ module.exports = {
         icon: "static/favicon.ico",
       },
     },
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
   ],
   pathPrefix: "/img",
 }

@@ -4,7 +4,6 @@ import Layout from "../components/layouts/blog-post-layout"
 
 export default ({ data }) => {
   const post = data.markdownRemark
-  console.log("DATA IS: ", data)
   return (
     <Layout>
       <div

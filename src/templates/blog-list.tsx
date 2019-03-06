@@ -20,6 +20,11 @@ export default class BlogList extends React.Component {
                 date: node.frontmatter.date,
                 title: node.frontmatter.title,
                 description: node.frontmatter.description,
+                coverFluid:
+                  node.frontmatter.cover &&
+                  node.frontmatter.cover.childImageSharp
+                    ? node.frontmatter.cover.childImageSharp.fluid
+                    : null,
               }}
             />
           </div>
@@ -61,6 +66,23 @@ export const blogListQuery = graphql`
             title
             date(formatString: "DD MMMM, YYYY")
             description
+            cover {
+              childImageSharp {
+                ... on ImageSharp {
+                  fluid(maxWidth: 800, maxHeight: 400) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+            }
+            # cover {
+            #   id
+            #   childImageSharp {
+            #     fluid {
+            #       srcWebp
+            #     }
+            #   }
+            # }
           }
         }
       }

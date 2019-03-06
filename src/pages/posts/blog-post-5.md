@@ -2,6 +2,7 @@
 title: "blog bost 5"
 date: "2019-03-05"
 description: "This is the 5th blog poost"
+cover: "blog-post-5.jpg"
 ---
 
 Was certainty remaining engrossed applauded sir how discovery. Settled opinion how enjoyed greater joy adapted too shy. Now properly surprise expenses interest nor replying she she. Bore tall nay many many time yet less. Doubtful for answered one fat indulged margaret sir shutters together. Ladies so in wholly around whence in at. Warmth he up giving oppose if. Impossible is dissimilar entreaties oh on terminated. Earnest studied article country ten respect showing had. But required offering him elegance son improved informed.
