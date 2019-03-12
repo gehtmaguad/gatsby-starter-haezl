@@ -53,8 +53,8 @@ export default ({ children }) => (
         </Default>
         <Mobile>
           <div style={{ textAlign: "center", marginTop: 10 }}>
-            <Link
-              to={`/#children`}
+            <a
+              onClick={() => window.history.back()}
               style={{
                 display: "inline-block",
                 borderRadius: 20,
@@ -70,10 +70,11 @@ export default ({ children }) => (
                 color: "#555",
                 textDecoration: "none",
                 fontSize: 18,
+                cursor: "pointer",
               }}
             >
-              All Posts
-            </Link>
+              Back
+            </a>
           </div>
         </Mobile>
         {children}
