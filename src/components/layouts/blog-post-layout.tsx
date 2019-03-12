@@ -3,7 +3,7 @@ import { StaticQuery, graphql, Link } from "gatsby"
 import Responsive from "react-responsive"
 
 import Author from "../me/author"
-import Menu from "../me/menu"
+import AboutButton from "../me/about-button"
 
 const Mobile = props => <Responsive {...props} maxWidth={767} />
 const Default = props => <Responsive {...props} minWidth={768} />
@@ -47,7 +47,7 @@ export default ({ children }) => (
               <Author author={data.site.siteMetadata.author} minimized={true} />
             </div>
             <div style={{ marginLeft: "auto", paddingRight: 10 }}>
-              <Menu minimized={true} />
+              <AboutButton />
             </div>
           </div>
         </Default>
