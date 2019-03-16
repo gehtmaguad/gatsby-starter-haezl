@@ -44,6 +44,14 @@ module.exports = {
     },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        theme: {
+          primaryColor: "#0c9ed1",
+        },
+      },
+    },
   ],
   pathPrefix: "/img",
 }

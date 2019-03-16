@@ -11,19 +11,20 @@ import CallToActionButton from "../me/calltoaction-button"
 const Mobile = props => <Responsive {...props} maxWidth={767} />
 const Default = props => <Responsive {...props} minWidth={768} />
 
-interface IIndexProps {
-  data: {
-    site: {
-      siteMetadata: {
-        author: {
-          name: string
-          image: string
-          biography: string
-        }
-        networks: string[]
+interface IDataProps {
+  site: {
+    siteMetadata: {
+      author: {
+        name: string
+        image: string
+        biography: string
       }
+      networks: string[]
     }
   }
+}
+interface IIndexProps {
+  data: IDataProps
   styles: {
     paddingTop: number
     paddingBottom: number
@@ -33,7 +34,7 @@ interface IIndexProps {
 }
 
 const IndexLayout = ({ data, styles, children }: IIndexProps) => (
-  <>
+  <div style={{ backgroundColor: "#eeeeee" }}>
     <div
       style={{
         backgroundImage: "linear-gradient(20deg, #039be5, #26a69a)",
@@ -65,7 +66,7 @@ const IndexLayout = ({ data, styles, children }: IIndexProps) => (
     >
       {children}
     </div>
-  </>
+  </div>
 )
 
 /*
@@ -88,7 +89,7 @@ export default ({ children }) => (
         }
       }
     `}
-    render={data => (
+    render={(data: IDataProps) => (
       <>
         <Default>
           <IndexLayout
