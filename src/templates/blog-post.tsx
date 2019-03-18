@@ -3,10 +3,17 @@ import { graphql } from "gatsby"
 import Layout from "../components/layouts/blog-post-layout"
 
 export default ({ data }) => {
-  const post = data.markdownRemark
+  const node = data.markdownRemark
   return (
-    <Layout title={post.frontmatter.title}>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+    <Layout
+      title={node.frontmatter.title}
+      cover={
+        node.frontmatter.cover && node.frontmatter.cover.childImageSharp
+          ? node.frontmatter.cover.childImageSharp.fluid
+          : null
+      }
+    >
+      <div dangerouslySetInnerHTML={{ __html: node.html }} />
     </Layout>
   )
 }
@@ -17,6 +24,15 @@ export const query = graphql`
       html
       frontmatter {
         title
+        cover {
+          childImageSharp {
+            ... on ImageSharp {
+              fluid(maxWidth: 800, maxHeight: 400) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+        }
       }
     }
   }
