@@ -1,6 +1,9 @@
 import * as React from "react"
 import { withPrefix, Link } from "gatsby"
 
+import Avatar from "@material-ui/core/Avatar"
+import Grid from "@material-ui/core/Grid"
+
 interface IProps {
   author: {
     name: string
@@ -11,20 +14,19 @@ interface IProps {
 
 export default ({ author }: IProps) => {
   return (
-    <div style={{ textAlign: "center", marginLeft: 50, marginRight: 50 }}>
+    <Grid container justify="center" alignItems="center" direction={"column"}>
       <Link to="/">
-        <img
+        <Avatar
           src={withPrefix(author.image)}
-          style={{ borderRadius: "50%", minWidth: 80, marginBottom: 25 }}
-          width="80"
-          height="80"
           alt={author.name}
+          style={{ alignItems: "baseline", width: 70, height: 70 }}
         />
       </Link>
       <h1
         style={{
-          fontSize: 30,
           color: "white",
+          fontSize: 30,
+          marginTop: 20,
           marginBottom: 20,
         }}
       >
@@ -32,15 +34,16 @@ export default ({ author }: IProps) => {
       </h1>
       <p
         style={{
-          fontSize: 20,
           color: "white",
+          fontSize: 20,
           maxWidth: 500,
           margin: "auto",
           marginBottom: 20,
+          textAlign: "center",
         }}
       >
         {author.biography}
       </p>
-    </div>
+    </Grid>
   )
 }
