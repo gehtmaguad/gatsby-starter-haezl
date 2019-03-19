@@ -1,31 +1,23 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import Button from "@material-ui/core/Button"
 
 export default () => (
-  <div
-    style={{
-      textAlign: "center",
-      display: "inline-block",
-    }}
-  >
-    <Link
-      to={`/about/`}
-      style={{
-        display: "inline-block",
-        borderRadius: 3,
-        borderColor: "white",
-        borderStyle: "solid",
-        borderWidth: 1,
-        textAlign: "center",
-        width: 150,
-        padding: 7,
-        margin: 15,
-        backgroundColor: "transparent",
-        color: "white",
-        textDecoration: "none",
-      }}
-    >
-      About
+  <div style={{ textAlign: "right" }}>
+    <Link to={`/about/`} style={{ textDecoration: "none" }}>
+      <Button
+        variant="outlined"
+        style={{
+          marginRight: 30,
+          marginTop: 30,
+          color: "white",
+          borderColor: "white",
+          textTransform: "none",
+          width: 100,
+        }}
+      >
+        About
+      </Button>
     </Link>
   </div>
 )

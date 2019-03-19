@@ -40,9 +40,7 @@ const IndexLayout = ({ data, styles, children }: IIndexProps) => (
         backgroundImage: "linear-gradient(20deg, #039be5, #26a69a)",
       }}
     >
-      <div style={{ textAlign: "right" }}>
-        <AboutButton />
-      </div>
+      <AboutButton />
       <div
         style={{
           paddingTop: styles.paddingTop,
