@@ -1,7 +1,7 @@
 import * as Typography from "typography"
-import funstonTheme from "typography-theme-funston"
+import fairyGatesTheme from "typography-theme-fairy-gates"
 
-const typography = new (Typography as any)(funstonTheme)
+const typography = new (Typography as any)(fairyGatesTheme)
 
 export default typography
 export const rhythm = typography.rhythm

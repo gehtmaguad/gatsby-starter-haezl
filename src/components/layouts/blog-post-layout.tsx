@@ -42,7 +42,9 @@ export default ({ title, cover, children }) => (
         >
           <ArrowBackIcon />
         </Fab>
-        {cover ? <Image fluid={cover} /> : null}
+        <div style={{ height: "auto", width: "auto" }}>
+          {cover ? <Image fluid={cover} /> : null}
+        </div>
         <ContentArea title={title}>{children}</ContentArea>
       </div>
     </Default>

@@ -1,3 +1,11 @@
 html {
     scroll-behavior: smooth;
 }
+
+.anchor {
+    background-image: none;
+}
+
+.gatsby-resp-image-link {
+    background-image: none;
+}
