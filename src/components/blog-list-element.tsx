@@ -23,10 +23,7 @@ export default ({ data }) => (
           <CardHeader
             avatar={
               <Avatar
-                aria-label="Recipe"
-                style={{
-                  backgroundColor: `#059ce2`,
-                }}
+                style={{ backgroundColor: `#059ce2`, textShadow: "none" }}
               >
                 {data.title.charAt(0).toUpperCase()}
               </Avatar>

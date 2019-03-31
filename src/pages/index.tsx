@@ -40,7 +40,6 @@ class Index extends React.Component<{ data: any }, { postsToShow: number }> {
     return (
       <Layout>
         <div style={{ minHeight: "50vh" }}>
-          <h4>Newest Posts</h4>
           {posts.slice(0, this.state.postsToShow).map(node => (
             <div key={node.id}>
               <BlogListElement

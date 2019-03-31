@@ -11,7 +11,9 @@ const Default = props => <Responsive {...props} minWidth={768} />
 
 const ContentArea = ({ title, children }) => (
   <Card style={{ padding: 50 }}>
-    <h1 style={{ marginBottom: 30, textAlign: "center" }}>{title}</h1>
+    <h1 style={{ marginBottom: 30, marginTop: 0, textAlign: "center" }}>
+      {title}
+    </h1>
     {children}
   </Card>
 )
