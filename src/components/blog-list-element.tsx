@@ -9,7 +9,7 @@ import Typography from "@material-ui/core/Typography"
 import Avatar from "@material-ui/core/Avatar"
 import CardHeader from "@material-ui/core/CardHeader"
 
-export default ({ data }) => (
+export default ({ data }: any) => (
   <div style={{ marginTop: 25, marginBottom: 25 }}>
     <Card>
       <CardActionArea>

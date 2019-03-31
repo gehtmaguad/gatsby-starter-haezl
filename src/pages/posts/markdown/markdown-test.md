@@ -1,5 +1,5 @@
 ---
-title: "blog post with markdown"
+title: "Markdown Example"
 date: "2019-03-25"
 description: "This is an example of markdown"
 cover: "markdown.jpg"

@@ -1,63 +1,18 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layouts/index-layout"
-import BlogListElement from "../components/blog-list-element"
+import BlogList from "../components/blog-list"
+import blogPostStore from "../stores/BlogPostStore"
 
-class Index extends React.Component<{ data: any }, { postsToShow: number }> {
-  state = {
-    postsToShow: 2,
-  }
-  ticking: boolean
-
-  update() {
-    const distanceToBottom =
-      document.documentElement.offsetHeight -
-      (window.scrollY + window.innerHeight)
-    if (distanceToBottom < 10) {
-      this.setState({ postsToShow: this.state.postsToShow + 1 })
-    }
-    this.ticking = false
-  }
-
-  handleScroll = () => {
-    if (!this.ticking) {
-      this.ticking = true
-      requestAnimationFrame(() => this.update())
-    }
-  }
-
-  componentDidMount() {
-    window.addEventListener(`scroll`, this.handleScroll)
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener(`scroll`, this.handleScroll)
-  }
-
+class Index extends React.Component<{ data: any }> {
   render() {
-    const posts = this.props.data.allMarkdownRemark.edges.map(e => e.node)
+    const posts = this.props.data.allMarkdownRemark.edges.map(
+      (e: any) => e.node
+    )
 
     return (
       <Layout>
-        <div style={{ minHeight: "50vh" }}>
-          {posts.slice(0, this.state.postsToShow).map(node => (
-            <div key={node.id}>
-              <BlogListElement
-                data={{
-                  slug: node.fields.slug,
-                  date: node.frontmatter.date,
-                  title: node.frontmatter.title,
-                  description: node.frontmatter.description,
-                  coverFluid:
-                    node.frontmatter.cover &&
-                    node.frontmatter.cover.childImageSharp
-                      ? node.frontmatter.cover.childImageSharp.fluid
-                      : null,
-                }}
-              />
-            </div>
-          ))}
-        </div>
+        <BlogList posts={posts} store={blogPostStore} />
       </Layout>
     )
   }

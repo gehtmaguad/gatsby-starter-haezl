@@ -1,7 +1,7 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
-export default ({ data }) => (
+export default ({ data }: any) => (
   <>
     <h1>About {data.site.siteMetadata.title}</h1>
     <p>
