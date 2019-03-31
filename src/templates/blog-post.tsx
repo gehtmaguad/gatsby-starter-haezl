@@ -4,6 +4,7 @@ import Layout from "../components/layouts/blog-post-layout"
 
 export default ({ data }) => {
   const node = data.markdownRemark
+
   return (
     <Layout
       title={node.frontmatter.title}
@@ -13,7 +14,11 @@ export default ({ data }) => {
           : null
       }
     >
-      <div dangerouslySetInnerHTML={{ __html: node.html }} />
+      {
+        // tslint:disable:react-no-dangerous-html
+        <div dangerouslySetInnerHTML={{ __html: node.html }} />
+        // tslint:enable:react-no-dangerous-html
+      }
     </Layout>
   )
 }

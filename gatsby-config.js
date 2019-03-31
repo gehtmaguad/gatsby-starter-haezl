@@ -15,6 +15,8 @@ module.exports = {
     ],
   },
   plugins: [
+    `gatsby-plugin-tslint`,
+    `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -47,7 +49,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {

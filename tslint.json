@@ -1,0 +1,25 @@
+{
+  "extends": ["tslint-react", "tslint-microsoft-contrib/recommended"],
+  "rulesDirectory": ["node_modules/tslint-microsoft-contrib"],
+  "rules": {
+    "export-name": false,
+    "import-name": false,
+    "match-default-export-name": false,
+    "no-any": false,
+    "no-backbone-get-set-outside-model": false,
+    "no-default-export": false,
+    "no-function-expression": false,
+    "no-relative-imports": false,
+    "no-unsafe-any": false,
+    "variable-name": false,
+    "no-submodule-imports": false,
+    "function-name": false,
+    "no-unnecessary-semicolons": false,
+    "no-typeof-undefined": false,
+    "no-single-line-block-comment": false,
+    "prefer-array-literal": false
+  },
+  "linterOptions": {
+    "exclude": ["./node-moudles/**/*.ts"]
+  }
+}
