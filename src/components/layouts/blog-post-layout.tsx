@@ -1,15 +1,26 @@
 import * as React from "react"
-import Responsive from "react-responsive"
-import Image from "gatsby-image"
+import Image, { FluidObject } from "gatsby-image"
 
 import Card from "@material-ui/core/Card"
-import Fab from "@material-ui/core/Fab"
-import ArrowBackIcon from "@material-ui/icons/ArrowBack"
+import CONFIG from "../../config"
+import FabButton from "../shared/FabButton"
 
-const Mobile = props => <Responsive {...props} maxWidth={767} />
-const Default = props => <Responsive {...props} minWidth={768} />
+interface IContentAreaProps {
+  children: React.ReactNode
+  title: string
+}
 
-const ContentArea = ({ title, children }) => (
+interface IHeaderArea {
+  cover: FluidObject
+}
+
+interface IBlogPostLayout {
+  children: React.ReactNode
+  title: string
+  cover: FluidObject
+}
+
+const ContentArea = ({ title, children }: IContentAreaProps) => (
   <Card style={{ padding: 50 }}>
     <h1 style={{ marginBottom: 30, marginTop: 0, textAlign: "center" }}>
       {title}
@@ -18,67 +29,35 @@ const ContentArea = ({ title, children }) => (
   </Card>
 )
 
-export default ({ title, cover, children }) => {
+const HeaderArea = ({ cover }: IHeaderArea) => {
   const goBack = () => window.history.back()
 
   return (
-    <div style={{ backgroundColor: "#eeeeee" }}>
-      <Default>
-        <div
-          style={{
-            maxWidth: 750,
-            margin: "0 auto",
-            paddingTop: 40,
-            paddingBottom: 40,
-          }}
-        >
-          <Fab
-            style={{
-              position: "absolute",
-              marginTop: 20,
-              marginLeft: 20,
-              zIndex: 50,
-              color: "#059ce2",
-              backgroundColor: "white",
-            }}
-            color="primary"
-            aria-label="Add"
-            onClick={goBack}
-          >
-            <ArrowBackIcon />
-          </Fab>
-          <div style={{ height: "auto", width: "auto" }}>
-            {cover ? <Image fluid={cover} /> : null}
-          </div>
-          <ContentArea title={title}>{children}</ContentArea>
-        </div>
-      </Default>
-      <Mobile>
-        <div style={{ marginTop: 10 }}>
-          <div
-            style={{
-              maxWidth: 650,
-              margin: "0 auto",
-              paddingTop: 40,
-              paddingLeft: 20,
-              paddingRight: 20,
-            }}
-          >
-            <h1
-              onClick={goBack}
-              style={{
-                display: "inline-block",
-                color: "#555",
-                textDecoration: "none",
-                cursor: "pointer",
-              }}
-            >
-              {`< ${title}`}
-            </h1>
-            {children}
-          </div>
-        </div>
-      </Mobile>
+    <>
+      <FabButton onClickHandler={goBack} />
+      <div style={{ height: "auto", width: "auto" }}>
+        {cover ? <Image fluid={cover} /> : null}
+      </div>
+    </>
+  )
+}
+
+export default ({ title, cover, children }: IBlogPostLayout) => {
+  return (
+    <div style={{ backgroundColor: CONFIG.blogPost.layout.backgroundColor }}>
+      <div
+        style={{
+          maxWidth: CONFIG.blogPost.layout.cardMaxWidth,
+          margin: "0 auto",
+          paddingTop: 40,
+          paddingLeft: 20,
+          paddingRight: 20,
+          paddingBottom: 40,
+        }}
+      >
+        <HeaderArea cover={cover} />
+        <ContentArea title={title}>{children}</ContentArea>
+      </div>
     </div>
   )
 }
