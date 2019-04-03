@@ -18,63 +18,67 @@ const ContentArea = ({ title, children }) => (
   </Card>
 )
 
-export default ({ title, cover, children }) => (
-  <div style={{ backgroundColor: "#eeeeee" }}>
-    <Default>
-      <div
-        style={{
-          maxWidth: 750,
-          margin: "0 auto",
-          paddingTop: 40,
-          paddingBottom: 40,
-        }}
-      >
-        <Fab
-          style={{
-            position: "absolute",
-            marginTop: 20,
-            marginLeft: 20,
-            zIndex: 50,
-            color: "#059ce2",
-            backgroundColor: "white",
-          }}
-          color="primary"
-          aria-label="Add"
-          onClick={() => window.history.back()}
-        >
-          <ArrowBackIcon />
-        </Fab>
-        <div style={{ height: "auto", width: "auto" }}>
-          {cover ? <Image fluid={cover} /> : null}
-        </div>
-        <ContentArea title={title}>{children}</ContentArea>
-      </div>
-    </Default>
-    <Mobile>
-      <div style={{ marginTop: 10 }}>
+export default ({ title, cover, children }) => {
+  const goBack = () => window.history.back()
+
+  return (
+    <div style={{ backgroundColor: "#eeeeee" }}>
+      <Default>
         <div
           style={{
-            maxWidth: 650,
+            maxWidth: 750,
             margin: "0 auto",
             paddingTop: 40,
-            paddingLeft: 20,
-            paddingRight: 20,
+            paddingBottom: 40,
           }}
         >
-          <h1
-            onClick={() => window.history.back()}
+          <Fab
             style={{
-              display: "inline-block",
-              color: "#555",
-              textDecoration: "none",
-              cursor: "pointer",
+              position: "absolute",
+              marginTop: 20,
+              marginLeft: 20,
+              zIndex: 50,
+              color: "#059ce2",
+              backgroundColor: "white",
+            }}
+            color="primary"
+            aria-label="Add"
+            onClick={goBack}
+          >
+            <ArrowBackIcon />
+          </Fab>
+          <div style={{ height: "auto", width: "auto" }}>
+            {cover ? <Image fluid={cover} /> : null}
+          </div>
+          <ContentArea title={title}>{children}</ContentArea>
+        </div>
+      </Default>
+      <Mobile>
+        <div style={{ marginTop: 10 }}>
+          <div
+            style={{
+              maxWidth: 650,
+              margin: "0 auto",
+              paddingTop: 40,
+              paddingLeft: 20,
+              paddingRight: 20,
             }}
           >
-            {`< ${title}`}
-          </h1>
-          {children}
+            <h1
+              onClick={goBack}
+              style={{
+                display: "inline-block",
+                color: "#555",
+                textDecoration: "none",
+                cursor: "pointer",
+              }}
+            >
+              {`< ${title}`}
+            </h1>
+            {children}
+          </div>
         </div>
-      </div>
-    </Mobile>
-  </div>
-)
+      </Mobile>
+    </div>
+  )
+}

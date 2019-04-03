@@ -87,6 +87,7 @@ export default ({ children }) => (
         }
       }
     `}
+    // tslint:disable-next-line:react-this-binding-issue
     render={(data: IDataProps) => (
       <>
         <Default>

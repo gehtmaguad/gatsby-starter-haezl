@@ -14,7 +14,12 @@ interface IProps {
 
 export default ({ author }: IProps) => {
   return (
-    <Grid container justify="center" alignItems="center" direction={"column"}>
+    <Grid
+      container={true}
+      justify="center"
+      alignItems="center"
+      direction={"column"}
+    >
       <Link to="/">
         <Avatar
           src={withPrefix(author.image)}
