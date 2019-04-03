@@ -1,13 +1,14 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import CONFIG from "../../config"
 
 export default () => (
   <div style={{ textAlign: "center", marginTop: 40 }}>
     <Link to={`#children`}>
       <span style={{ padding: 10 }}>
         <svg
-          width="25"
-          height="25"
+          width={CONFIG.callToActionButton.width}
+          height={CONFIG.callToActionButton.height}
           viewBox="0 0 24 24"
           aria-hidden="true"
           fill="white"

@@ -3,6 +3,7 @@ import { withPrefix, Link } from "gatsby"
 
 import Avatar from "@material-ui/core/Avatar"
 import Grid from "@material-ui/core/Grid"
+import CONFIG from "../../config"
 
 interface IProps {
   author: {
@@ -22,15 +23,19 @@ export default ({ author }: IProps) => {
     >
       <Link to="/">
         <Avatar
+          style={{
+            alignItems: "baseline",
+            width: CONFIG.author.avatar.width,
+            height: CONFIG.author.avatar.height,
+          }}
           src={withPrefix(author.image)}
           alt={author.name}
-          style={{ alignItems: "baseline", width: 70, height: 70 }}
         />
       </Link>
       <h1
         style={{
-          color: "white",
-          fontSize: 30,
+          color: CONFIG.author.title.color,
+          fontSize: CONFIG.author.title.fontSize,
           marginTop: 20,
           marginBottom: 20,
         }}
@@ -39,9 +44,9 @@ export default ({ author }: IProps) => {
       </h1>
       <p
         style={{
-          color: "white",
-          fontSize: 20,
-          maxWidth: 500,
+          color: CONFIG.author.desc.color,
+          fontSize: CONFIG.author.desc.fontSize,
+          maxWidth: CONFIG.author.desc.maxWidth,
           margin: "auto",
           marginBottom: 20,
           textAlign: "center",
