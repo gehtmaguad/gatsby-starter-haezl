@@ -6,7 +6,7 @@ import Author from "../me/author"
 import AboutButton from "../me/about-button"
 import SocialNetworks from "../me/social-networks"
 import CallToActionButton from "../me/calltoaction-button"
-import CONFIG from "../../config"
+import THEME from "../../theme"
 
 const Mobile = props => <Responsive {...props} maxWidth={767} />
 const Default = props => <Responsive {...props} minWidth={768} />
@@ -43,7 +43,7 @@ interface IHeaderArea {
 const HeaderArea = ({ data, styles }: IHeaderArea) => (
   <div
     style={{
-      backgroundImage: "linear-gradient(20deg, #039be5, #26a69a)",
+      backgroundImage: THEME.index.header.backgroundImage,
     }}
   >
     <AboutButton />
@@ -66,7 +66,7 @@ const ContentArea = ({ children }: { children: React.ReactNode }) => (
     style={{
       flexGrow: 1,
       margin: "0 auto",
-      maxWidth: CONFIG.index.layout.cardSectionMaxWidth,
+      maxWidth: THEME.index.layout.cardSectionMaxWidth,
       padding: 20,
       paddingTop: 15,
     }}
@@ -76,7 +76,7 @@ const ContentArea = ({ children }: { children: React.ReactNode }) => (
 )
 
 const IndexLayout = ({ data, styles, children }: IIndexProps) => (
-  <div style={{ backgroundColor: CONFIG.index.layout.backgroundColor }}>
+  <div style={{ backgroundColor: THEME.index.layout.backgroundColor }}>
     <HeaderArea data={data} styles={styles} />
     <ContentArea children={children} />
   </div>

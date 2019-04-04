@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import Image from "gatsby-image"
+import Image, { FluidObject } from "gatsby-image"
 
 import Card from "@material-ui/core/Card"
 import CardActionArea from "@material-ui/core/CardActionArea"
@@ -8,8 +8,19 @@ import CardContent from "@material-ui/core/CardContent"
 import Typography from "@material-ui/core/Typography"
 import Avatar from "@material-ui/core/Avatar"
 import CardHeader from "@material-ui/core/CardHeader"
+import THEME from "../theme";
 
-export default ({ data }: any) => (
+interface IBlogListElement {
+  data: {
+    slug: string
+    date: string
+    title: string
+    description: string
+    coverFluid: FluidObject | null
+  }
+}
+
+export default ({ data }: IBlogListElement) => (
   <div style={{ marginTop: 25, marginBottom: 25 }}>
     <Card>
       <CardActionArea>
@@ -23,7 +34,11 @@ export default ({ data }: any) => (
           <CardHeader
             avatar={
               <Avatar
-                style={{ backgroundColor: `#059ce2`, textShadow: "none" }}
+                style={{ 
+                  backgroundColor: THEME.blogListElement.avatar.backgroundColor,
+                  color: THEME.blogListElement.avatar.color, 
+                  textShadow: "none" 
+                }}
               >
                 {data.title.charAt(0).toUpperCase()}
               </Avatar>

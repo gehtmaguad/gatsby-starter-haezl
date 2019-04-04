@@ -2,7 +2,7 @@ import * as React from "react"
 import Image, { FluidObject } from "gatsby-image"
 
 import Card from "@material-ui/core/Card"
-import CONFIG from "../../config"
+import THEME from "../../theme"
 import FabButton from "../shared/FabButton"
 
 interface IContentAreaProps {
@@ -44,10 +44,10 @@ const HeaderArea = ({ cover }: IHeaderArea) => {
 
 export default ({ title, cover, children }: IBlogPostLayout) => {
   return (
-    <div style={{ backgroundColor: CONFIG.blogPost.layout.backgroundColor }}>
+    <div style={{ backgroundColor: THEME.blogPost.layout.backgroundColor }}>
       <div
         style={{
-          maxWidth: CONFIG.blogPost.layout.cardMaxWidth,
+          maxWidth: THEME.blogPost.layout.cardMaxWidth,
           margin: "0 auto",
           paddingTop: 40,
           paddingLeft: 20,

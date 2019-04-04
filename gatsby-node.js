@@ -1,5 +1,9 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+
+const BLOG_POST_LIMIT = 1000
+const BLOG_POST_COVER_IMAGE_MAX_WIDTH = 800
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
@@ -20,7 +24,7 @@ exports.createPages = ({ graphql, actions }) => {
     {
       allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
-        limit: 1000
+        limit: ${BLOG_POST_LIMIT}
       ) {
         edges {
           node {
@@ -41,6 +45,7 @@ exports.createPages = ({ graphql, actions }) => {
           // Data passed to context is available
           // in page queries as GraphQL variables.
           slug: node.fields.slug,
+          coverImageMaxWidth: BLOG_POST_COVER_IMAGE_MAX_WIDTH,
         },
       })
     })

@@ -1,6 +1,6 @@
 import * as React from "react"
 import { SocialIcon } from "react-social-icons"
-import CONFIG from "../../config"
+import THEME from "../../theme"
 
 interface ISocialNetworks {
   networks: string[]
@@ -26,11 +26,11 @@ export default ({ networks }: ISocialNetworks) => (
       >
         <SocialIcon
           style={{
-            width: CONFIG.networkButton.width,
-            height: CONFIG.networkButton.height,
+            width: THEME.networkButton.width,
+            height: THEME.networkButton.height,
           }}
-          fgColor={CONFIG.networkButton.color}
-          bgColor={CONFIG.networkButton.backgroundColor}
+          fgColor={THEME.networkButton.color}
+          bgColor={THEME.networkButton.backgroundColor}
           target="_blank"
           url={networkUrl}
         />

@@ -3,9 +3,26 @@ import { observer } from "mobx-react"
 import { BlogPostStore } from "../stores/BlogPostStore"
 
 import BlogListElement from "./blog-list-element"
+import CONFIG from "../config"
+import { FluidObject } from "gatsby-image"
 
 interface IProps {
-  posts: any[]
+  posts: {
+    id: string
+    fields: {
+      slug: string
+    }
+    frontmatter: {
+      date: string
+      title: string
+      description: string
+      cover?: {
+        childImageSharp?: {
+          fluid: FluidObject | null
+        }
+      }
+    }
+  }[]
   store: BlogPostStore
 }
 
@@ -17,8 +34,8 @@ class BlogList extends React.Component<IProps, {}> {
     const distanceToBottom =
       document.documentElement.offsetHeight -
       (window.scrollY + window.innerHeight)
-    if (distanceToBottom < 10) {
-      this.props.store.add(1)
+    if (distanceToBottom < CONFIG.offsetHeightToTriggerLoading) {
+      this.props.store.add()
     }
     this.ticking = false
   }

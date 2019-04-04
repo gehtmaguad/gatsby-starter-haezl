@@ -1,18 +1,14 @@
 import { observable, action } from "mobx"
+import CONFIG from "../config"
 
 export class BlogPostStore {
-  @observable postsToShow: number = 3
+  @observable postsToShow: number = CONFIG.countOfInitiallyShownPosts
 
   @action
-  add(numberOfPosts: number) {
-    this.postsToShow += numberOfPosts
-  }
-
-  @action
-  subtract(numberOfPosts: number) {
-    this.postsToShow -= numberOfPosts
+  add() {
+    this.postsToShow += CONFIG.countOfPostsDynamicallyAdded
   }
 }
 
-const blogPostStore = new BlogPostStore();
-export default blogPostStore;
+const blogPostStore = new BlogPostStore()
+export default blogPostStore
