@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import Layout from "../components/layouts/index-layout"
 import BlogList from "../components/blog-list"
 import blogPostStore from "../stores/BlogPostStore"
-import { number } from "prop-types"
 import { FluidObject } from "gatsby-image"
 
 interface IIndex {
@@ -51,10 +50,7 @@ export default Index
 
 export const query = graphql`
   query {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: 5
-    ) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       totalCount
       edges {
         node {
