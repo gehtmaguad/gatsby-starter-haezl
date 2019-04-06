@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Pandas eating Lots`,
+    title: `Gatsby Starter Haezl`,
     author: {
-      name: "Gatsby.js",
+      name: "gatsby starter haezl",
       image: "/img/me.png",
       biography:
-        "Welcome to Gatsby! Enjoy the power of the latest web technologies – React.js , Webpack , modern JavaScript and CSS and more — all set up and waiting for you to start building.",
+        "Yet another gatsby starter with a mobile first approach, implementing a blogging site with infinite scroll.",
     },
     // for a list of supported networks take a look at https://jaketrent.github.io/react-social-icons/
     networks: [
@@ -52,7 +52,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        pathToConfigModule: `src/styles/typography`,
       },
     },
     {
