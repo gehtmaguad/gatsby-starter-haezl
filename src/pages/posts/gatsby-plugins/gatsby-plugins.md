@@ -79,6 +79,16 @@ For further details take a look at:
 
 ## gatsby-plugin-manifest
 
+Provides drop-in support for shipping a manifest file in order to save the web application to smartphone home screens so it behaves similar to native apps.
+
+For further details take a look at [gatsby-plugin-manifest](https://www.gatsbyjs.org/packages/gatsby-plugin-manifest/)
+
+## gatsby-plugin-offline
+
+Adds drop-in support for making a Gatsby site work offline and more resistant to bad network connections. It creates a service worker for the site and loads the service worker into the client.
+
+For further details take a look at [gatsby-plugin-offline](https://www.gatsbyjs.org/packages/gatsby-plugin-offline/)
+
 ## gatsby-plugin-material-ui
 
 Provides drop-in support for Material UI and built-in server-side rendering. Uses [Material UI](https://github.com/mui-org/material-ui).

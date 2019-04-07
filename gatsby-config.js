@@ -58,15 +58,17 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "test123",
-        short_name: "title 123",
+        name: "gatsby-starter-haezl",
+        short_name: "haezl",
         start_url: "/",
-        background_color: "#FFF",
-        theme_color: "#F7A046",
+        background_color: "#eeeeee",
+        theme_color: "#0c9ed1",
         display: "standalone",
-        icon: "static/favicon.ico",
+        icon: "static/img/me.png",
+        include_favicon: true,
       },
     },
+    "gatsby-plugin-offline",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     {
