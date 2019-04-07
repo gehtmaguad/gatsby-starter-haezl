@@ -1,6 +1,6 @@
 ---
 title: "Markdown Example"
-date: "2019-03-25"
+date: "2019-04-09"
 description: "This blog entry is meant to give an overview of Markdown syntax supported through currently installed plugins"
 cover: "markdown.jpg"
 ---

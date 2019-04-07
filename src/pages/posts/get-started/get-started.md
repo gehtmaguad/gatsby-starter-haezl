@@ -1,6 +1,6 @@
 ---
 title: "Readme"
-date: "2019-04-05"
+date: "2019-04-11"
 description: "This blog entry is meant to provide a Readme on how to get up and running with this gatsby starter"
 cover: "ideas-start-here.jpg"
 ---

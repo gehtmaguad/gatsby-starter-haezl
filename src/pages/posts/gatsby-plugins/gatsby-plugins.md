@@ -1,8 +1,7 @@
 ---
-title: "Gatsby Plugins"
-date: "2019-03-25"
-description: "Description of gatsby plugins used in this starter"
-cover: "plugins.jpg"
+title: "gatsby plugins used by this starter"
+date: "2019-04-10"
+description: "A descriptive list of gatsby plugins used by this template. For each plugin a short overview, usage in this starter and a link to the plugins site is given."
 ---
 
 ## gatsby-plugin-tslint
