@@ -5,7 +5,6 @@ const THEME = {
       backgroundColor: "#eeeeee",
     },
   },
-  blogList: {},
   blogListElement: {
     avatar: {
       color: "none",
