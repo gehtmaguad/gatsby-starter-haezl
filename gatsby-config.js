@@ -5,7 +5,9 @@ module.exports = {
       name: "gatsby starter haezl",
       image: "/img/me.png",
       biography:
-        "Yet another gatsby starter with a mobile first approach, implementing a blogging site with infinite scroll.",
+        'A lightweight, mobile first blog starter with infinite scroll \
+        and Material-UI design elements for \
+        <a href="https://github.com/gatsbyjs/gatsby" target="_blank">Gatsby</a>.',
     },
     // for a list of supported networks take a look at https://jaketrent.github.io/react-social-icons/
     networks: [

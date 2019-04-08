@@ -1,26 +1,51 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  Gatsby's hello-world starter
+    <img alt="haezl" title="haezl" src="static/img/me.png" width="100"> </br>
+    gatsby-starter-haezl
 </h1>
 
-Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+<h4 align="center">
+A lightweight, mobile first blog starter with infinite scroll and Material-UI design elements 
+for <a href="https://github.com/gatsbyjs/gatsby" target="_blank">Gatsby</a>.
+</h4>
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+## Table of contents
 
-## 🚀 Quick start
+- [Features](#features)
+- [Quick Start](#quick-start)
+- [Folder Structure](#folder-structure)
+- [License](#license)
+
+## Features
+
+- Typescript
+- Material-UI
+- MobX
+- Just Inline Styling
+- Customizeable
+- Theming
+- Posts in Markdown with
+  - Code syntax highlighting
+  - HTML
+  - Headings
+  - Images
+  - Unicode Emojies
+- Responsive Design
+- Infinite Scroll
+- Header Section with
+  - Logo
+  - Name
+  - Description
+  - Social Networks
+
+## Quick start
 
 1.  **Create a Gatsby site.**
 
-    Use the Gatsby CLI to create a new site, specifying the hello-world starter.
+    Use the Gatsby CLI to create a new site, specifying the haezl starter.
 
     ```sh
-    # create a new Gatsby site using the hello-world starter
-    npx gatsby new my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
+    # create a new Gatsby site using the haezl starter
+    npx gatsby new my-blog https://github.com/haezl/gatsby-starter-haezl
     ```
 
 1.  **Start developing.**
@@ -28,7 +53,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
     Navigate into your new site’s directory and start it up.
 
     ```sh
-    cd my-hello-world-starter/
+    cd my-blog/
     gatsby develop
     ```
 
@@ -38,15 +63,22 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-    Open the `my-hello-world-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+    Open the `my-blog` directory in your code editor of choice and edit `src/pages/index.tsx`. Save your changes and the browser will update in real time!
 
-## 🧐 What's inside?
+## Folder Structure
 
 A quick look at the top-level files and directories you'll see in a Gatsby project.
 
     .
     ├── node_modules
     ├── src
+        ├── components
+        ├── pages
+            └── posts
+        ├── stores
+        ├── styles
+        └── templates
+    ├── static
     ├── .gitignore
     ├── .prettierrc
     ├── gatsby-browser.js
@@ -82,16 +114,14 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 12. **`README.md`**: A text file containing useful reference information about your project.
 
-## 🎓 Learning Gatsby
+## License
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+The MIT License (MIT)
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+Copyright (c) 2016-2019 Alexander Shelepenok
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-## 💫 Deploy
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
