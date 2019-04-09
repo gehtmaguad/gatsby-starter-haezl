@@ -1,7 +1,7 @@
 import * as React from "react"
 import Image, { FluidObject } from "gatsby-image"
-
 import Card from "@material-ui/core/Card"
+
 import THEME from "../../theme"
 import FabButton from "../shared/FabButton"
 

@@ -55,6 +55,12 @@ const THEME = {
     width: 45,
     height: 45,
   },
+  aboutPage: {
+    layout: {
+      cardMaxWidth: 800,
+      backgroundColor: "#eeeeee",
+    },
+  },
 }
 
 export default THEME

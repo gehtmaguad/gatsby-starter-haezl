@@ -1,14 +1,40 @@
 import * as React from "react"
 import { graphql } from "gatsby"
+import Card from "@material-ui/core/Card"
+
+import THEME from "../theme"
 
 export default ({ data }: any) => (
-  <>
-    <h1>About {data.site.siteMetadata.title}</h1>
-    <p>
-      We're the only site running on your computer dedicated to showing the best
-      photos and videos of pandas eating lots of food.
-    </p>
-  </>
+  <div
+    style={{
+      backgroundColor: THEME.aboutPage.layout.backgroundColor,
+      minHeight: "100vh",
+    }}
+  >
+    <div
+      style={{
+        maxWidth: THEME.aboutPage.layout.cardMaxWidth,
+        margin: "0 auto",
+        paddingTop: 40,
+        paddingLeft: 20,
+        paddingRight: 20,
+        paddingBottom: 40,
+      }}
+    >
+      <Card style={{ padding: 50 }}>
+        <h1 style={{ marginBottom: 30, marginTop: 0, textAlign: "center" }}>
+          About {data.site.siteMetadata.title}
+        </h1>
+        {
+          // tslint:disable:react-no-dangerous-html
+          <div
+            dangerouslySetInnerHTML={{ __html: data.site.siteMetadata.about }}
+          />
+          // tslint:enable:react-no-dangerous-html
+        }
+      </Card>
+    </div>
+  </div>
 )
 
 export const query = graphql`
@@ -16,6 +42,7 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        about
       }
     }
   }
