@@ -67,8 +67,8 @@ const ContentArea = ({ children }: { children: React.ReactNode }) => (
       flexGrow: 1,
       margin: "0 auto",
       maxWidth: THEME.index.layout.cardSectionMaxWidth,
-      padding: 20,
-      paddingTop: 15,
+      padding: 10,
+      paddingTop: 10,
     }}
   >
     {children}
