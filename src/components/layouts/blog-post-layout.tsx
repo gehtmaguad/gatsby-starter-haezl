@@ -36,7 +36,15 @@ const ContentArea = ({ title, children }: IContentAreaProps) => (
     </Default>
     <Mobile>
       <Card style={{ padding: 15 }}>
-        <h1 style={{ marginBottom: 30, marginTop: 0, textAlign: "center" }}>
+        <h1
+          style={{
+            marginBottom: 30,
+            marginTop: 0,
+            marginLeft: 70,
+            marginRight: 70,
+            textAlign: "center",
+          }}
+        >
           {title}
         </h1>
         {children}

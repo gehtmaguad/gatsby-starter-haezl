@@ -1,7 +1,7 @@
 const THEME = {
   blogPost: {
     layout: {
-      cardMaxWidth: 800,
+      cardMaxWidth: 1000,
       backgroundColor: "#eeeeee",
     },
   },
