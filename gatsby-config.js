@@ -10,9 +10,9 @@ module.exports = {
     },
     // for a list of supported networks take a look at https://jaketrent.github.io/react-social-icons/
     networks: [
-      "https://twitter.com/gatsbyjs",
-      "https://github.com/gatsbyjs/gatsby",
-      "https://www.reddit.com/r/gatsbyjs/",
+      "https://twitter.com/iamhaezl",
+      "https://github.com/haezl/gatsby-starter-haezl",
+      "mailto:mail@haezl.at",
     ],
     about:
       '<p>A lightweight, mobile first blog starter with infinite scroll \
