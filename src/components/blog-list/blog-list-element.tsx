@@ -8,7 +8,7 @@ import CardContent from "@material-ui/core/CardContent"
 import Typography from "@material-ui/core/Typography"
 import Avatar from "@material-ui/core/Avatar"
 import CardHeader from "@material-ui/core/CardHeader"
-import THEME from "../theme";
+import THEME from "../../theme";
 
 interface IBlogListElement {
   data: {

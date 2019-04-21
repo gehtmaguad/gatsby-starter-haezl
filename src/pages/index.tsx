@@ -1,11 +1,10 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layouts/index-layout"
-import BlogList from "../components/blog-list"
-import blogPostStore from "../stores/BlogPostStore"
+import BlogList from "../components/blog-list/blog-list"
 import { FluidObject } from "gatsby-image"
 
-interface IIndex {
+interface IProps {
   data: {
     allMarkdownRemark: {
       totalCount: number
@@ -27,20 +26,21 @@ interface IIndex {
             excerpt: string
           }
         }
-      }
+      }[]
     }
   }
 }
 
-class Index extends React.Component<{ data: any }> {
+class Index extends React.Component<IProps> {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges.map(
       (e: any) => e.node
     )
+    const totalCount = this.props.data.allMarkdownRemark.totalCount
 
     return (
       <Layout>
-        <BlogList posts={posts} store={blogPostStore} />
+        <BlogList posts={posts} totalCount={totalCount} />
       </Layout>
     )
   }

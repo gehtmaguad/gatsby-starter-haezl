@@ -4,6 +4,12 @@ const THEME = {
       cardMaxWidth: 1000,
       backgroundColor: "#eeeeee",
     },
+    showMoreButton: {
+      color: "#059ce2",
+      borderColor: "#059ce2",
+      backgroundColor: "none",
+      width: 130,
+    },
   },
   blogListElement: {
     avatar: {
