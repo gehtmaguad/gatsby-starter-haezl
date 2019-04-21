@@ -1,5 +1,5 @@
 ---
-title: "Readme"
+title: "Get started"
 date: "2019-04-11"
 description: "This blog entry is meant to provide a Readme on how to get up and running with this gatsby starter"
 cover: "ideas-start-here.jpg"
@@ -7,7 +7,7 @@ cover: "ideas-start-here.jpg"
 
 ## Quick Start
 
-Follow the Quick Start instructions outlined in README.md in the root of the project.
+Follow the Quick Start instructions outlined in the **[README](https://github.com/haezl/gatsby-starter-haezl "README.md")** in the root of the project.
 
 ## Add blog posts
 
