@@ -88,7 +88,7 @@ Adds drop-in support for making a Gatsby site work offline and more resistant to
 
 For further details take a look at [gatsby-plugin-offline](https://www.gatsbyjs.org/packages/gatsby-plugin-offline/)
 
-Currently a `cacheFirst` approach is used. In order to propagate new updates to the users `onServiceWorkerUpdateFound` is registered in `gatsby-browser.js`
+Currently a `cacheFirst` approach is used. In order to propagate new updates to the users `onServiceWorkerUpdateFound` is registered in `gatsby-browser.js`.
 
 ## gatsby-plugin-material-ui
 
