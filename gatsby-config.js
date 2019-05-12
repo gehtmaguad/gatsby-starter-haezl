@@ -86,8 +86,7 @@ module.exports = {
       options: {
         runtimeCaching: [
           {
-            // Use cacheFirst since these don't need to be revalidated (same RegExp
-            // and same reason as above)
+            // Use networkFirst
             urlPattern: /(\.js$|\.css$|static\/)/,
             handler: `networkFirst`,
           },
