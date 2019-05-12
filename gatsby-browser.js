@@ -5,5 +5,5 @@ export const onServiceWorkerUpdateReady = () => {
   console.log(
     "onServiceWorkerUpdateReady hook triggered: force reloading page."
   )
-  window.location.reload(true)
+  // window.location.reload(true)
 }
