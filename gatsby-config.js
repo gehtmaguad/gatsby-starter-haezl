@@ -4,8 +4,7 @@ module.exports = {
     author: {
       name: "gatsby starter haezl",
       image: "/img/me.png",
-      biography:
-        "A lightweight, mobile first blog starter with infinite scroll \
+      biography: "A lightweight, mobile first blog starter with infinite scroll \
         and Material-UI design elements for Gatsby.",
     },
     // for a list of supported networks take a look at https://jaketrent.github.io/react-social-icons/
@@ -14,8 +13,7 @@ module.exports = {
       "https://github.com/haezl/gatsby-starter-haezl",
       "mailto:mail@haezl.at",
     ],
-    about:
-      '<p>A lightweight, mobile first blog starter with infinite scroll \
+    about: '<p>A lightweight, mobile first blog starter with infinite scroll \
     and Material-UI design elements for \
     <a href="https://github.com/gatsbyjs/gatsby" target="_blank">Gatsby</a>. </p> \
     <p>For a quick start with this starter checkout the \
@@ -84,8 +82,10 @@ module.exports = {
     {
       resolve: "gatsby-plugin-offline",
       options: {
-        runtimeCaching: [
-          {
+        // Don't cache-bust JS or CSS files, and anything in the static directory,
+        // since these files have unique URLs and their contents will never change
+        dontCacheBustUrlsMatching: /(\.js$|\.css$|static\/)/,
+        runtimeCaching: [{
             // Use networkFirst
             urlPattern: /(\.js$|\.css$|static\/)/,
             handler: `networkFirst`,
